@@ -1,0 +1,11 @@
+{
+    "extends": "creative-area/es2017",
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "max-nested-callbacks": [ "error", 6 ],
+        "no-magic-numbers": "off",
+        "no-throw-literal": "off"
+    }
+}

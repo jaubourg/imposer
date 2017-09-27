@@ -1,0 +1,44 @@
+{
+    "description": "an extension of native promises with notifications and a deep asynchronous awareness",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "ava": "0.22.0",
+        "coveralls": "2.13.1",
+        "eslint": "4.7.2",
+        "eslint-config-creative-area": "0.7.0",
+        "nyc": "11.2.1",
+        "promises-aplus-tests": "2.1.2",
+        "promises-es6-tests": "0.5.0"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "eslintConfig": {
+        "extends": "creative-area/es2017",
+        "env": {
+            "node": true
+        }
+    },
+    "license": "MIT",
+    "main": "./index.js",
+    "name": "imposer",
+    "nyc": {
+        "cache": true,
+        "include": [ "index.js" ]
+    },
+    "repository": "jaubourg/imposer",
+    "scripts": {
+        "coverage": "yarn run coverage-run && nyc report --reporter=html",
+        "coverage-run": "nyc yarn test-all",
+        "coveralls": "yarn run coverage-run && nyc report --reporter=text-lcov | coveralls",
+        "test": "eslint . && yarn run test-all",
+        "test-all": "yarn run test-compliance && yarn run test-imposer",
+        "test-compliance": "yarn run test-aplus && yarn run test-es6",
+        "test-aplus": "promises-aplus-tests ./test/helpers/external.js",
+        "test-es6": "promises-es6-tests ./test/helpers/external.js",
+        "test-imposer": "ava -s -v",
+        "travis": "eslint . && yarn run coveralls"
+    },
+    "version": "0.0.0-alpha.1"
+}
