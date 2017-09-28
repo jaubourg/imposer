@@ -31,15 +31,15 @@ tests(
             },
             "two values and one promise": {
                 "expect": [ 1, 4, 7 ],
-                "given": () => [ 1, 4, wait( 10 ).then( () => 7 ) ],
+                "given": () => [ 1, 4, wait( 0 ).then( () => 7 ) ],
             },
             "one promise and two values": {
                 "expect": [ 7, 1, 4 ],
-                "given": () => [ wait( 10 ).then( () => 7 ), 1, 4 ],
+                "given": () => [ wait( 0 ).then( () => 7 ), 1, 4 ],
             },
             "three promises": {
                 "expect": [ 7, 4, 1 ],
-                "given": () => [ wait( 30 ).then( () => 7 ), wait( 20 ).then( () => 4 ), wait( 10 ).then( () => 1 ) ],
+                "given": () => [ wait( 150 ).then( () => 7 ), wait( 50 ).then( () => 4 ), wait( 0 ).then( () => 1 ) ],
             },
         },
         "deliver": {
