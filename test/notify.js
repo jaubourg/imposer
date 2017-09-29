@@ -54,11 +54,11 @@ tests(
             "in bulk with a promise": ( { each }, given ) => {
                 each( wait( 0 ).then( given ) );
             },
-            "in bulk from Imposer.of": ( notify, given ) => {
-                notify( Imposer.of( given() ) );
+            "in bulk from Imposer.from": ( notify, given ) => {
+                notify( Imposer.from( given() ) );
             },
-            "in bulk from Imposer.of from a promise": ( notify, given ) => {
-                notify( Imposer.of( wait( 0 ).then( given ) ) );
+            "in bulk from Imposer.from from a promise": ( notify, given ) => {
+                notify( Imposer.from( wait( 0 ).then( given ) ) );
             },
         },
     },
