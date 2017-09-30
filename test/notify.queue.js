@@ -54,8 +54,8 @@ tests(
             "in bulk with a promise": ( { each }, given ) => {
                 each( wait( 0 ).then( given ) );
             },
-            "in bulk from Imposer.from from a promise": ( queue, given ) => {
-                queue( Imposer.from( wait( 20 ).then( given ), true ) );
+            "in bulk from Imposer.fromInOrder from a promise": ( queue, given ) => {
+                queue( Imposer.fromInOrder( wait( 20 ).then( given ) ) );
             },
         },
     },

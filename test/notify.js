@@ -60,6 +60,9 @@ tests(
             "in bulk from Imposer.from from a promise": ( notify, given ) => {
                 notify( Imposer.from( wait( 0 ).then( given ) ) );
             },
+            "in bulk from Imposer.of": ( notify, given ) => {
+                notify( Imposer.of( ...given() ) );
+            },
         },
     },
     ( { deliver, "notifications": { expect, given } }, t ) => {
