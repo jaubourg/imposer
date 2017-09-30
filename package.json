@@ -37,7 +37,7 @@
         "test-compliance": "yarn run test-aplus && yarn run test-es6",
         "test-aplus": "promises-aplus-tests ./test/helpers/external.js",
         "test-es6": "promises-es6-tests ./test/helpers/external.js",
-        "test-imposer": "ava -v",
+        "test-imposer": "ava -v"
     },
     "version": "0.0.0-alpha.2"
 }
