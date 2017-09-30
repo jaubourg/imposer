@@ -17,6 +17,8 @@
 
 # Overview
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaubourg/imposer.svg)](https://greenkeeper.io/)
+
 Imposer is an extension of native promises with notifications and a deep asynchronous awareness.
 
 # API
